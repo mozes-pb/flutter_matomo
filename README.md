@@ -1,5 +1,8 @@
 # flutter_matomo
 
+NOTE: THIS IS A MIRROR OF https://gitlab.com/petleo-and-iatros-opensource/flutter_matomo 
+ALL CREDITS GOES TO THE ORIGINAL DEVELOPER
+
 Matomo tracking for flutter
 
 Works on both **Android and/or iOS**. Version 1.1.4 supports AndroidX.  

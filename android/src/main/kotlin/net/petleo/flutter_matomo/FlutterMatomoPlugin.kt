@@ -38,6 +38,15 @@ class FlutterMatomoPlugin(val activity: Activity, val channel: MethodChannel) : 
                     result.success("Matomo:: $url failed with this error: ${e.printStackTrace()}")
                 }
             }
+            "setUserID" -> {
+                try {
+                    val userID = call.argument<String>("userID")
+                    tracker?.setUserId(userID)
+                    result.success("Matomo:: Set User ID $userID sent to ${tracker?.apiUrl}")
+                } catch (e: Exception) {
+                    result.success("Matomo:: Failed to set User ID, did you call initializeTracker ?")
+                }
+            }
             "trackEvent" -> {
                 try {
                     val widgetName = call.argument<String>("widgetName")

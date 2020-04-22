@@ -3,7 +3,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_matomo'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Matomo tracking for flutter'
   s.description      = <<-DESC
 Matomo tracking for flutter

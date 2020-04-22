@@ -24,6 +24,13 @@ public class SwiftFlutterMatomoPlugin: NSObject, FlutterPlugin {
 //      }
         result("Matomo:: \(url) initialized successfully.")
     }
+    if(call.method.elementsEqual("setUserID")){
+        let arguments = call.arguments as? NSDictionary
+        let userID = arguments?["userID"] as? String
+        matomoTracker?.userId = userID
+        matomoTracker?.dispatch()
+        result("Matomo:: setUserID \(userID) sent")
+    }
     if(call.method.elementsEqual("trackEvent")){
             let arguments = call.arguments as? NSDictionary
             let widgetName = arguments?["widgetName"] as? String
